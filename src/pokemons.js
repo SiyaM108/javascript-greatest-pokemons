@@ -20,6 +20,13 @@ function getShortestPokemon(pokemons) {
 }
 
 // Iteration 3: candy_count average - average of `candy_count` for all the pokemons
+function getCandyCountAverage(pokemons) {
+  const totalCandyCount = pokemons.reduce((sum, pokemon) => {
+    return sum + (pokemon.candy_count || 0);
+  }, 0);
+
+  return totalCandyCount / pokemons.length;
+}
 
 // Iteration 4: images for the first 10 `Ground`  Pokemons
 
