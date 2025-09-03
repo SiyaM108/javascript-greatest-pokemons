@@ -7,16 +7,18 @@ function getAllFirePokemons(pokemons) {
 function getShortestPokemon(pokemons) {
   if (pokemons.length === 0)
     return 0;
-  let shortest = pokemons[0];
+  else{
+    let shortest = pokemons[0];
 
-  pokemons.forEach(pokemon => {
-    const height = parseFloat(pokemon.height);
-    const shortestHeight = parseFloat(shortest.height);
+    pokemons.forEach(pokemon => {
+      const height = parseFloat(pokemon.height);
+      const shortestHeight = parseFloat(shortest.height);
 
-    if (height < shortestHeight) {
-      shortest = pokemon;
-    }
-  });
+      if (height < shortestHeight) {
+        shortest = pokemon;
+      }
+    });
+  }
 
   return shortest.name;
 }
