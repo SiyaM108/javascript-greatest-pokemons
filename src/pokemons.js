@@ -5,6 +5,8 @@ function getAllFirePokemons(pokemons) {
 
 // Iteration 2: Shortest Pokemon- find the `name` of the shortest pokemon
 function getShortestPokemon(pokemons) {
+  if (pokemons.length === 0)
+    return 0;
   let shortest = pokemons[0];
 
   pokemons.forEach(pokemon => {
