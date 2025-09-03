@@ -37,6 +37,14 @@ function getGroundPokeImg(pokemons) {
 }
 
 // Iteration 5: Find all pokemon names heavier than Pikachu
+function getHeavyPokemons(pokemons) {
+  const pikachu = pokemons.find(pokemon => pokemon.name === 'Pikachu');
+  const pikachuWeight = parseFloat(pikachu.weight);
+
+  return pokemons
+    .filter(pokemon => parseFloat(pokemon.weight) > pikachuWeight)
+    .map(pokemon => pokemon.name);
+}
 
 // Iteration 6: Alphabetic Order - Order by name and print the first 20 names
 
