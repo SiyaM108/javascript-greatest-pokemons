@@ -4,6 +4,20 @@ function getAllFirePokemons(pokemons) {
 }
 
 // Iteration 2: Shortest Pokemon- find the `name` of the shortest pokemon
+function getShortestPokemon(pokemons) {
+  let shortest = pokemons[0];
+
+  pokemons.forEach(pokemon => {
+    const height = parseFloat(pokemon.height);
+    const shortestHeight = parseFloat(shortest.height);
+
+    if (height < shortestHeight) {
+      shortest = pokemon;
+    }
+  });
+
+  return shortest.name;
+}
 
 // Iteration 3: candy_count average - average of `candy_count` for all the pokemons
 
