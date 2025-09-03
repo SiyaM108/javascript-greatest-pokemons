@@ -60,3 +60,18 @@ function getStrongPokemons(pokemons) {
 }
 
 // Iteration 7: Strong pokemons - return an array of first 15 pokemons, that have just one `weakness`. If there are less that 15, return all of them
+function strongPokemons(pokemons) {
+  return pokemons
+    .filter(pokemon => pokemon.weaknesses.length === 1)
+    .slice(0, 15);
+}
+
+module.exports = {
+  getAllFirePokemons,
+  getShortestPokemon,
+  getCandyAverage,
+  getGroundPokeImg,
+  getHeavyPokemons,
+  orderAlphabetically,
+  strongPokemons
+};
